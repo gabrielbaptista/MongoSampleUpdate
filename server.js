@@ -20,10 +20,10 @@ api.use(express.json());
 // Essa configuração na API indica que haverá JWT para cada endpoint / rota método, com exceção dos métodos
 // de autenticação, registro de usuários e sobre. Essa camada de segurança é muito boa, porque ajuda
 // na diminuição do tratamento de mensagens indevidas na aplicação
-api.use('/api', expressJwt({ secret: process.env.secret || config.secret }).unless({ path: ['/api/about','/api/users/authenticate', '/api/users/register'] }));
+//api.use('/api', expressJwt({ secret: process.env.secret || config.secret }).unless({ path: ['/api/about','/api/users/authenticate', '/api/users/register'] }));
 api.use('/api/pessoas', require('./controllers/api/pessoas.controller'));
 api.use('/api/about', require('./controllers/api/about.controller'));
-api.use('/api/users', require('./controllers/api/users.controller'));
+//api.use('/api/users', require('./controllers/api/users.controller'));
 
 // process.env.PORT é uma variável injetada pelo Azure Web App. Caso ela não exista, será utilizada a porta fixa (6000)
 var apiPort = process.env.PORT || config.port;
