@@ -1,0 +1,8 @@
+{
+    "connectionString": "mongodb://localhost:27017/mongo-sample",
+    "connectionStringV2": "mongodb://localhost:27017",
+    "databaseV2":"mongo-sample",
+    "version": "1.0.3 - 18/03/2021",
+    "port": 9090,
+    "secret": "MongoSampleSecret-2021"
+}
