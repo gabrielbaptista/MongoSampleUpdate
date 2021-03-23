@@ -1,5 +1,6 @@
 var config = require('config.json');
 var Q = require('q');
+var lodash = require('lodash');
 var connection = process.env.connectionStringV2 || config.connectionStringV2;
 var database = process.env.databaseV2 || config.databaseV2;
 const ObjectID = require('mongodb').ObjectID;
@@ -101,11 +102,7 @@ function update(personParam) {
 
     function updatePerson() {
         // fields to update
-        var set = {
-            personName: personParam.personName,
-            personDateOfBirth: personParam.personDateOfBirth,
-            personPlaceOfBirth: personParam.personPlaceOfBirth,
-        };
+        var set = lodash.omit(personParam, '_id');
 
         people.updateOne(
             { _id:new ObjectID.createFromHexString( personParam._id) },
