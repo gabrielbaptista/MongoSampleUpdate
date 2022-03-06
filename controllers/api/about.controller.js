@@ -7,10 +7,16 @@ router.get('/', about);
 
 module.exports = router;
 
-function about(req, res) {
+async function getVersion() {
+   return {
+      version: config.version,
+      date: config.date
+   }
+}
+
+async function about(req, res) {
+   let info = await getVersion();
    res.send(
-      {
-         version: config.version
-      }
+      info
    );
 }

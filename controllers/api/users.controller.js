@@ -26,12 +26,12 @@ function authenticateUser(req, res) {
         });
 }
 
-function registerUser(req, res) {
-    userService.create(req.body)
-        .then(function (user) {
-            res.status(200).send(user);
-        })
-        .catch(function (err) {
-            res.status(400).send(err);
-        });
+async function registerUser(req, res) {
+    try {
+        let user = await userService.create(req.body);
+        res.status(200).send(user);
+
+    } catch (error) {
+        res.status(400).send(error);
+    }
 }
