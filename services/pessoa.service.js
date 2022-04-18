@@ -91,6 +91,7 @@ function listPeople() {
 function update(personParam) {
     var deferred = Q.defer();
     var people = global.conn.collection("people");
+    
     // validation
     people.findOne({ _id: new ObjectID.createFromHexString( personParam._id) }, function (err, person) {
         if (err) deferred.reject(err.name + ': ' + err.message);

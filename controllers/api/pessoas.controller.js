@@ -8,7 +8,7 @@ router.get('/', listPeople);
 router.put('/', updatePerson);
 router.get('/:_id', getCurrentPerson);
 router.delete('/:_id', deletePerson);
-
+    
 module.exports = router;
 
 function createPerson(req, res) {
