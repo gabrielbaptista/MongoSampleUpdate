@@ -1,9 +1,9 @@
 {
-    "connectionString": "mongodb://localhost:27017/mongo-sample",
-    "connectionStringV2": "mongodb://localhost:27017",
+    "connectionString": "mongodb://127.0.0.1:27017/mongo-sample",
+    "connectionStringV2": "mongodb://127.0.0.1:27017",
     "databaseV2":"mongo-sample",
-    "version": "1.0.4",
-    "date" :  "06/03/2022",
+    "version": "1.0.5",
+    "date" :  "30/01/2023",
     "port": 9090,
-    "secret": "MongoSampleSecret-2022"
+    "secret": "MongoSampleSecret-2023"
 }
