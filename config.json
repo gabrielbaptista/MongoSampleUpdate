@@ -3,7 +3,7 @@
     "connectionStringV2": "mongodb://127.0.0.1:27017",
     "databaseV2":"mongo-sample",
     "version": "1.0.5",
-    "date" :  "30/01/2023",
+    "date" :  "22/11/2023",
     "port": 9090,
     "secret": "MongoSampleSecret-2023"
 }
